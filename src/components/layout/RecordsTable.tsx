@@ -74,7 +74,7 @@ const [confirmDelete, setConfirmDelete] = useState<string | null>(null);
 
           <button 
             onClick={() => handleAdd()} 
-            className="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-semibold hover:bg-blue-500 transition-all shadow-lg shadow-blue-600/30 hover:shadow-blue-500/40 active:scale-95"
+            className="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-semibold hover:bg-blue-500 transition-all shadow-lg shadow-blue-600/30 hover:shadow-blue-500/40 active:scale-95 cursor-pointer"
           >
             + Add Employee
           </button>

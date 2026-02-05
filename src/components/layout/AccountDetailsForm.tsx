@@ -40,14 +40,14 @@ export default function AccountDetailsForm(props: AccountDetailsFormProps) {
       modal={modal}
       setShowDetailsModal={setShowDetailsModal}
     >
-      <div className="flex flex-col gap-2">
-        <span className="text-sm">Photo (optional)</span>
-        <div className="flex items-center gap-4">
-          <div className="w-16 h-16 border rounded-full overflow-hidden bg-gray-50 flex items-center justify-center">
+      <div className="flex flex-col gap-3">
+        <span className="text-sm font-semibold text-zinc-300">Photo (optional)</span>
+        <div className="flex items-center gap-6">
+          <div className="w-20 h-20 border-2 border-zinc-700 rounded-full overflow-hidden bg-zinc-800 flex items-center justify-center ring-2 ring-zinc-800 shadow-lg">
             {values.imageSrc ? (
               <img src={values.imageSrc} alt="Preview" className="w-full h-full object-cover" />
             ) : (
-              <span className="text-xs text-gray-400">No Image</span>
+              <span className="text-xs text-zinc-500 font-medium">No Image</span>
             )}
           </div>
 
@@ -55,104 +55,108 @@ export default function AccountDetailsForm(props: AccountDetailsFormProps) {
             type="file"
             accept="image/*"
             onChange={handleImageChange}
-            className="flex-1 mt-1 p-2 border rounded text-sm file:mr-4 file:py-1 file:px-4 file:rounded-full file:border-0 file:text-sm file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+            className="flex-1 mt-1 p-2.5 border border-zinc-700 bg-zinc-800 text-zinc-300 rounded-lg text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-blue-600 file:text-white hover:file:bg-blue-500 file:transition-all file:cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all"
           />
         </div>
       </div>
       
-      <div className="grid grid-cols-2 gap-4">
-        <label className="flex flex-col">
-          <span className="text-sm">First name</span>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <label className="flex flex-col gap-2">
+          <span className="text-sm font-semibold text-zinc-300">First name</span>
           <input
             type="text"
             value={values.firstName}
             onChange={handleChange("firstName")}
-            className="mt-1 p-2 border rounded"
+            className="p-2.5 border border-zinc-700 bg-zinc-800 text-white rounded-lg placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all"
             placeholder="First name"
           />
         </label>
 
-        <label className="flex flex-col">
-          <span className="text-sm">Last name</span>
+        <label className="flex flex-col gap-2">
+          <span className="text-sm font-semibold text-zinc-300">Last name</span>
           <input
             type="text"
             value={values.lastName}
             onChange={handleChange("lastName")}
-            className="mt-1 p-2 border rounded"
+            className="p-2.5 border border-zinc-700 bg-zinc-800 text-white rounded-lg placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all"
             placeholder="Last name"
           />
         </label>
       </div>
 
-      <label className="flex flex-col">
-        <span className="text-sm">Username</span>
+      <label className="flex flex-col gap-2">
+        <span className="text-sm font-semibold text-zinc-300">Username</span>
         <input
           type="text"
           value={values.username}
           onChange={handleChange("username")}
-          className="mt-1 p-2 border rounded"
+          className="p-2.5 border border-zinc-700 bg-zinc-800 text-white rounded-lg placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all"
+          placeholder="Username"
         />
       </label>
 
-      <label className="flex flex-col">
-        <span className="text-sm">Email</span>
+      <label className="flex flex-col gap-2">
+        <span className="text-sm font-semibold text-zinc-300">Email</span>
         <input
           type="email"
           value={values.email}
           onChange={handleChange("email")}
-          className="mt-1 p-2 border rounded"
+          className="p-2.5 border border-zinc-700 bg-zinc-800 text-white rounded-lg placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all"
           placeholder="you@example.com"
         />
       </label>
 
-      <label className="flex flex-col">
-        <span className="text-sm">Password</span>
+      <label className="flex flex-col gap-2">
+        <span className="text-sm font-semibold text-zinc-300">Password</span>
         <input
           type="password"
           value={values.password}
           onChange={handleChange("password")}
-          className="mt-1 p-2 border rounded"
+          className="p-2.5 border border-zinc-700 bg-zinc-800 text-white rounded-lg placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all"
+          placeholder="••••••••"
         />
       </label>
 
-      <label className="flex flex-col">
-        <span className="text-sm">Account Type</span>
+      <label className="flex flex-col gap-2">
+        <span className="text-sm font-semibold text-zinc-300">Account Type</span>
         <input
           type="text"
           value={values.accountType}
           onChange={handleChange("accountType")}
-          className="mt-1 p-2 border rounded"
+          className="p-2.5 border border-zinc-700 bg-zinc-800 text-white rounded-lg placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all"
+          placeholder="e.g., Admin, Employee"
         />
       </label>
 
-      <label className="flex flex-col">
-        <span className="text-sm">Country</span>
+      <label className="flex flex-col gap-2">
+        <span className="text-sm font-semibold text-zinc-300">Country</span>
         <input
           type="text"
           value={values.country}
           onChange={handleChange("country")}
-          className="mt-1 p-2 border rounded"
+          className="p-2.5 border border-zinc-700 bg-zinc-800 text-white rounded-lg placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all"
+          placeholder="Country"
         />
       </label>
 
-      <label className="flex flex-col">
-        <span className="text-sm">Phone (optional)</span>
+      <label className="flex flex-col gap-2">
+        <span className="text-sm font-semibold text-zinc-300">Phone (optional)</span>
         <input
           type="tel"
           value={values.phone}
           onChange={handleChange("phone")}
-          className="mt-1 p-2 border rounded"
+          className="p-2.5 border border-zinc-700 bg-zinc-800 text-white rounded-lg placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all"
           placeholder="0917xxxxxxx"
         />
       </label>
 
-      <label className="flex flex-col">
-        <span className="text-sm">Address (optional)</span>
+      <label className="flex flex-col gap-2">
+        <span className="text-sm font-semibold text-zinc-300">Address (optional)</span>
         <textarea
           value={values.address}
           onChange={handleChange("address")}
-          className="mt-1 p-2 border rounded"
-          placeholder="Address"
+          className="p-2.5 border border-zinc-700 bg-zinc-800 text-white rounded-lg placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all resize-none"
+          placeholder="Full address"
           rows={3}
         />
       </label>
