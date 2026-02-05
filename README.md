@@ -6,7 +6,7 @@ Welcome to the **JK Network Exam Employee Management UI**. This is a modern, res
 
 ## Prerequisites
 
-Before you begin, ensure you have the following installed:
+Before you begin, ensure you have the following installed and running:
 * **Node.js** (v24.x or higher)
 * **Git**
 * **JK Network Exam API** (running locally - see API README)
